@@ -53,6 +53,7 @@ a {
   align-items: center;
   justify-content: center;
   gap: 1.25rem;
+  padding-bottom: 2rem;
 }
 
 /* Products Section Header */
@@ -103,11 +104,14 @@ a {
   background-color: transparent;
   color: var(--primary-text);
   cursor: pointer;
+  font-weight: 400;
+  font-size: 14px;
 }
 
 .nav-tab-active {
   background-color: var(--white);
   color: var(--secondary);
+  font-weight: 500;
 }
 
 /* Product Grid */
@@ -240,13 +244,17 @@ a {
 
   .nav-tab {
     padding: 10px 50px;
+    font-size: 20px;
   }
 
   .products-section {
     padding-inline: 3rem;
     max-width: 1440px;
     margin: 0 auto;
+    padding-bottom: 0;
+    gap: 0;
   }
+
   .product-grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -327,7 +335,7 @@ a {
     transition: transform 0.35s ease;
   }
 
-  .skeleton-card{
+  .skeleton-card {
     height: 300px;
     width: 100%;
   }
