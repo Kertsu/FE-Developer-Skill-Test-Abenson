@@ -42,6 +42,32 @@ a {
   color: var(--secondary-text);
 }
 
+/* Navigation Tabs */
+.nav-tabs{
+  border-radius: var(--radius-2xl);
+  padding: .5rem;
+  display: flex;
+  align-items: center;
+  gap: .25rem;
+  background-color: #ECF5FF;
+  width: max-content;
+  margin: 0 auto;
+}
+
+.nav-tab{
+  padding: 4px 30px;
+  border-radius: var(--radius-xl);
+  border: none;
+  background-color: transparent;
+  color: var(--primary-text);
+  cursor: pointer;
+}
+
+.nav-tab-active{
+  background-color: var(--white);
+  color: var(--secondary);
+}
+
 /* Product Grid */
 .product-grid {
   display: grid;
