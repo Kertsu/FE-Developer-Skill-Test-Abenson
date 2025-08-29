@@ -5,7 +5,6 @@ class TabSelector {
   }
 
   init() {
-    console.log("TabSelector initialized");
     this.bindEvents();
   }
 

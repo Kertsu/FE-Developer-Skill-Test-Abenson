@@ -26,7 +26,7 @@ a {
   color: inherit;
 }
 
-:focus-visible{
+:focus-visible {
   outline: var(--secondary) auto 1px;
 }
 
@@ -149,7 +149,6 @@ a {
   height: 100px;
   object-fit: cover;
   border-radius: var(--radius-lg);
-  object-position: 90% 32%;
 }
 
 .product-info {
@@ -163,6 +162,10 @@ a {
   font-size: 0.875rem; /* 24px */
   font-weight: 600;
   line-height: 1.5rem;
+}
+
+.info-reveal > .product-title {
+  display: none;
 }
 
 .product-description {
@@ -188,12 +191,16 @@ a {
   color: var(--secondary-text);
 }
 
-/* Small screens and up (sm) */
-@media (min-width: 640px) {
-}
-
 /* Medium screens and up (md) */
 @media (min-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+
+/* Large screens and up (lg) */
+@media (min-width: 1024px) {
   .main-content {
     gap: 2.5rem;
     padding-top: 2.5rem;
@@ -218,15 +225,12 @@ a {
   .products-section {
     padding-inline: 3rem;
   }
-
   .product-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .product-card {
     padding: 12px 12px 24px 12px;
-    position: relative;
     overflow: hidden;
   }
 
@@ -234,30 +238,43 @@ a {
     font-size: 1.5rem;
   }
 
+  .info-reveal > .product-title {
+    display: unset;
+  }
+
   .product-card > div:first-child {
     flex-direction: column;
     gap: 0;
     width: 100%;
+    position: relative;
   }
 
   .product-info {
     gap: 0.75rem;
     padding: 16px 24px 24px 24px;
     background-color: var(--white);
+    transition: all 0.3s ease;
+  }
+
+  .info-reveal {
+    flex-direction: column;
+    gap: 0.25rem;
+    display: flex;
     position: absolute;
     bottom: -50%;
-    transition: bottom 0.3s ease;
     left: 0;
     right: 0;
+    padding: 16px 24px 24px 24px;
+    background-color: var(--white);
+    transition: bottom 0.3s ease;
   }
 
   @media (hover: hover) {
-    .product-card:hover .product-info {
+    .product-card:hover .info-reveal {
       bottom: 0;
     }
     .product-card:hover .product-image img {
       transform: scale(1.03);
-      transform-origin: right;
     }
   }
 
@@ -286,15 +303,4 @@ a {
     max-height: 300px;
     transition: transform 0.35s ease;
   }
-}
-
-/* Large screens and up (lg) */
-@media (min-width: 1024px) {
-  .product-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* Extra large screens and up (xl) */
-@media (min-width: 1280px) {
 }

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./style.css" />
     <script src="./index.js" defer></script>
     <title>Abenson</title>
   </head>
@@ -44,14 +44,21 @@
                     <h3 class="product-title">
                       <span class="text-blue-secondary">Plush</span>
                     </h3>
-                    <p class="product-description">
-                      Very soft and cushiony — you’ll sink in and feel hugged.
-                      Great for pressure relief.
-                    </p>
-                    <div class="product-tags md">
-                      <span class="product-tag">Side Sleeper</span>
-                      <span class="product-tag">Light Sleeper</span>
-                      <span class="product-tag">With Backpain</span>
+
+                    <div class="info-reveal">
+                      <h3 class="product-title">
+                        <span class="text-blue-secondary">Plush</span>
+                      </h3>
+                      <p class="product-description">
+                        Very soft and cushiony — you’ll sink in and feel hugged.
+                        Great for pressure relief.
+                      </p>
+                      <!-- will only be visible on md and up -->
+                      <div class="product-tags md">
+                        <span class="product-tag">Side Sleeper</span>
+                        <span class="product-tag">Light Sleeper</span>
+                        <span class="product-tag">With Backpain</span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -63,74 +70,6 @@
                 </div>
               </article>
             </a>
-
-            <!-- MEDIUM PLUSH -->
-            <a href="">
-              <article class="product-card">
-                <div>
-                  <div class="product-image">
-                    <img
-                      src="../public/firmness/medium-plush.png"
-                      alt="Medium Plush"
-                    />
-                  </div>
-                  <div class="product-info">
-                    <h3 class="product-title">
-                      <span class="text-blue-secondary">Medium</span>&nbsp;<span
-                        class="text-blue-primary"
-                        >Plush</span
-                      >
-                    </h3>
-                    <p class="product-description">
-                      Still soft, but with a little more pushback. A cozy
-                      balance of contour and support.
-                    </p>
-                    <div class="product-tags md">
-                      <span class="product-tag">Side Sleeper</span>
-                      <span class="product-tag">Combo Sleeper</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="product-tags sm">
-                  <span class="product-tag">Side Sleeper</span>
-                  <span class="product-tag">Combo Sleeper</span>
-                </div>
-              </article>
-            </a>
-
-            <!-- FIRM -->
-            <a href="">
-              <article class="product-card">
-                <div>
-                  <div class="product-image">
-                    <img src="../public/firmness/firm.png" alt="Firm" />
-                  </div>
-                  <div class="product-info">
-                    <h3 class="product-title">
-                      <span class="text-blue-secondary">Firm</span>
-                    </h3>
-                    <p class="product-description">
-                      More solid, with less give. Keeps your body lifted and
-                      aligned.
-                    </p>
-                    <div class="product-tags md">
-                      <span class="product-tag">Back Sleeper</span>
-                      <span class="product-tag">Stomach Sleeper</span>
-                      <span class="product-tag">Heavier Individual</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="product-tags sm">
-                  <span class="product-tag">Back Sleeper</span>
-                  <span class="product-tag">Stomach Sleeper</span>
-                  <span class="product-tag">Heavier Individual</span>
-                </div>
-              </article>
-            </a>
-
-            <!-- MEDIUM FIRM -->
           </section>
         </div>
       </section>
