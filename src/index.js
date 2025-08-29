@@ -1,23 +1,90 @@
 class TabSelector {
   constructor() {
+    this.products = [];
     this.currentTab = "types";
+    this.productGrid = document.querySelector(".product-grid");
     this.init();
   }
 
   init() {
     this.bindEvents();
+    this.setActiveTab(document.querySelector('[data-tab="types"]'));
+    this.loadProducts();
   }
 
   // We need to bind events to the navigation tabs so we can handle tab navigation
   bindEvents() {
     const navTabs = document.querySelector(".nav-tabs");
+
     navTabs.addEventListener("click", (event) => this.handleTabClick(event));
     navTabs.addEventListener("keydown", (event) =>
       this.handleTabKeyDown(event)
     );
   }
 
-  handleTabClick(event) {
+  async loadProducts() {
+    this.showSkeletons();
+    const response = await fetch("products.json");
+    this.products = await response.json();
+    this.renderProducts(this.currentTab);
+  }
+
+  renderProducts(category) {
+    this.productGrid.innerHTML = ""; // clear old items
+
+    const filtered = this.products.filter((p) => p.category === category);
+
+    filtered.forEach((item) => {
+      const link = document.createElement("a");
+      link.href = "#";
+      link.dataset.title = item.title;
+      link.dataset.tags = item.tags.join(",");
+
+      link.innerHTML = `
+      <article class="product-card">
+        <div>
+          <div class="product-image">
+            <img width="550" height="300" src="${item.image}" alt="${item.title}" />
+          </div>
+          <div class="product-info">
+            <h3 class="product-title-reveal">
+              <span class="text-blue-secondary">${item.title}</span>
+            </h3>
+            <div class="info-reveal">
+              <h3 class="product-title">
+                <span class="text-blue-secondary">${item.title}</span>
+              </h3>
+              <p class="product-description">${item.description}</p>
+              <div class="product-tags md">
+                ${item.tags
+                  .map((tag) => `<span class="product-tag">${tag}</span>`)
+                  .join("")}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product-tags sm">
+          ${item.tags
+            .map((tag) => `<span class="product-tag">${tag}</span>`)
+            .join("")}
+        </div>
+      </article>
+    `;
+
+      this.productGrid.appendChild(link);
+    });
+  }
+
+  showSkeletons(count = 6) {
+    this.productGrid.innerHTML = "";
+    for (let i = 0; i < count; i++) {
+      const skeleton = document.createElement("div");
+      skeleton.classList.add("skeleton-card");
+      this.productGrid.appendChild(skeleton);
+    }
+  }
+
+  async handleTabClick(event) {
     const clickedTab = event.target.closest(".nav-tab");
     if (!clickedTab) return;
 
@@ -26,7 +93,10 @@ class TabSelector {
 
     this.setActiveTab(clickedTab);
     this.currentTab = tabName;
-    this.filterProducts();
+
+    this.showSkeletons();
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    this.renderProducts(tabName);
   }
 
   // Good for keyboard navigation (tab + enter)
@@ -37,7 +107,6 @@ class TabSelector {
     }
   }
 
-  //   todo
   setActiveTab(clickedTab) {
     document.querySelectorAll(".nav-tab").forEach((tab) => {
       tab.classList.remove("nav-tab-active");
@@ -45,9 +114,6 @@ class TabSelector {
 
     clickedTab.classList.add("nav-tab-active");
   }
-
-  //   todo
-  filterProducts(category) {}
 }
 
 document.addEventListener("DOMContentLoaded", () => {
