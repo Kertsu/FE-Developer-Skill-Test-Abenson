@@ -26,6 +26,10 @@ a {
   color: inherit;
 }
 
+:focus-visible{
+  outline: var(--secondary) auto 1px;
+}
+
 .text-blue-primary {
   color: var(--primary);
 }
