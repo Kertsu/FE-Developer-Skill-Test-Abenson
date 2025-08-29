@@ -14,6 +14,7 @@ class TabSelector {
 
   // We need to bind events to the navigation tabs so we can handle tab navigation
   bindEvents() {
+    // we'll just do event delegation instead of attaching event listeners to each tab
     const navTabs = document.querySelector(".nav-tabs");
 
     navTabs.addEventListener("click", (event) => this.handleTabClick(event));
