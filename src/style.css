@@ -262,6 +262,7 @@ a {
 
   .product-title-reveal {
     display: unset;
+    font-size: 1.5rem;
   }
 
   .product-card > div:first-child {
@@ -283,7 +284,7 @@ a {
     gap: 0.25rem;
     display: flex;
     position: absolute;
-    bottom: -50%;
+    bottom: -60%;
     left: 0;
     right: 0;
     padding: 16px 24px 24px 24px;

@@ -40,19 +40,37 @@ class TabSelector {
       link.dataset.title = item.title;
       link.dataset.tags = item.tags.join(",");
 
+      const titleParts = item.title.split(" ");
+      let titleHTML;
+
+      if (titleParts.length > 1) {
+        // everything except the last word
+        const firstPart = titleParts.slice(0, -1).join(" ");
+        const lastPart = titleParts[titleParts.length - 1];
+
+        titleHTML = `
+        <span class="text-blue-secondary">${firstPart}</span>
+        <span class="text-blue-primary">${lastPart}</span>
+      `;
+      } else {
+        titleHTML = `<span class="text-blue-secondary">${item.title}</span>`;
+      }
+
       link.innerHTML = `
       <article class="product-card">
         <div>
           <div class="product-image">
-            <img width="550" height="300" src="${item.image}" alt="${item.title}" />
+            <img width="550" height="300" src="${item.image}" alt="${
+        item.title
+      }" />
           </div>
           <div class="product-info">
-            <h3 class="product-title-reveal">
-              <span class="text-blue-secondary">${item.title}</span>
+            <h3 class="product-title">
+              ${titleHTML}
             </h3>
             <div class="info-reveal">
-              <h3 class="product-title">
-                <span class="text-blue-secondary">${item.title}</span>
+              <h3 class="product-title-reveal">
+                ${titleHTML}
               </h3>
               <p class="product-description">${item.description}</p>
               <div class="product-tags md">
@@ -94,6 +112,7 @@ class TabSelector {
     this.setActiveTab(clickedTab);
     this.currentTab = tabName;
 
+    // simulate API call
     this.showSkeletons();
     await new Promise((resolve) => setTimeout(resolve, 1000));
     this.renderProducts(tabName);
