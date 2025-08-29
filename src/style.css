@@ -66,7 +66,7 @@ a {
 .header-title {
   font-weight: 700;
   line-height: 54px;
-  size: 1.25rem;
+  font-size: 1.25rem;
   letter-spacing: 0%;
 }
 
@@ -163,7 +163,7 @@ a {
 }
 
 .product-title {
-  font-size: 0.875rem; /* 24px */
+  font-size: 0.875rem; /* 14px */
   font-weight: 600;
   line-height: 1.5rem;
 }
@@ -236,6 +236,7 @@ a {
 
   .header-title {
     font-size: 2rem;
+    font-weight: 600;
   }
 
   .header-subtitle {
