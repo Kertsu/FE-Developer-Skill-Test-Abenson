@@ -29,7 +29,7 @@ A lightweight front-end app that displays and filters mattress products by **Typ
 ## 📁 Project Structure
 
     FE-DEVELOPER-SKILL-TEST-ABENSON/
-    ├─ public/
+    ├─ assets/
     │  ├─ firmness/
     │  │  ├─ firm.png
     │  │  ├─ medium-firm.png
@@ -49,13 +49,12 @@ A lightweight front-end app that displays and filters mattress products by **Typ
     │     ├─ spring-mattress.png
     │     └─ trundle-bed.png
     │
-    ├─ src/
-    │  ├─ index.html      # App shell + containers for the product grid
-    │  ├─ index.js        # Tab logic, async data loading, rendering, (optional) skeletons
-    │  ├─ products.json   # Product data source (single flat array with `category`)
-    │  └─ style.css       # Styling (layout, product card, skeleton, tabs)
-    │
+    ├─ index.html      # App shell + containers for the product grid
+    ├─ index.js        # Tab logic, async data loading, rendering, (optional) skeletons
+    ├─ products.json   # Product data source (single flat array with `category`)
+    ├─ style.css       # Styling (layout, product card, skeleton, tabs)
     └─ README.md
+
 
 ---
 
@@ -74,20 +73,20 @@ A lightweight front-end app that displays and filters mattress products by **Typ
           "category": "types" | "sizes" | "firmness",
           "title": "String",
           "description": "String",
-          "tags": ["String", ...],
-          "image": "../public/<folder>/<file>.png"
+          "tags": ["String", "..."],
+          "image": "assets/products/<category>/<file>.png"
         }
 
+
 - **Images**
-  - Images live under `public/<category>/...`.
-  - Paths in `products.json` are relative to `src/index.html` (e.g., `../public/types/memory-foam.png`).
+  - Images live under `assets/products/<category>/...`.
 
 ---
 
 ## ✍️ Adding / Editing Products
 
 1) Add a new object to `src/products.json` with the required fields (`category`, `title`, `description`, `tags`, `image`).
-2) Place the corresponding image in the correct `public/<category>/` folder.
+2) Place the corresponding image in the correct `assets/products/<category>/` folder.
 3) No restart needed—just refresh the page.
 
 Example item:
@@ -97,7 +96,7 @@ Example item:
       "title": "Queen Size",
       "description": "Most popular size for couples.",
       "tags": ["60 in x 80 in", "152 cm x 203 cm"],
-      "image": "../public/sizes/queen-size.png"
+      "image": "assets/products/sizes/queen-size.png"
     }
 
 ---
@@ -109,14 +108,6 @@ Example item:
 - Asynchronous data loading + conditional rendering
 - Simple state management (active tab/category)
 - Optional UX enhancement (skeleton loaders)
-
----
-
-## 🔧 Troubleshooting
-
-- **Images not showing:** ensure the path in `products.json` points to the correct file in `/public/...`, and that you’re serving `src/index.html` from the `src` folder (Live Server handles this automatically).
-- **CORS / fetch errors when opening via file://**: use Live Server (or any static server) instead of double-clicking the HTML file if your browser blocks `fetch` from local files.
-
 
 ---
 
