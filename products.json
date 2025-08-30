@@ -3,35 +3,35 @@
     "category": "sizes",
     "title": "Single Bed",
     "tags": ["36 in x 75 in", "91 cm x 191 cm"],
-    "image": "products/sizes/single-bed.png",
+    "image": "assets/products/sizes/single-bed.png",
     "description": "Compact bed ideal for kids or small spaces."
   },
   {
     "category": "sizes",
     "title": "Twin Bed",
     "tags": ["39 in x 75 in", "99 cm x 191 cm"],
-    "image": "products/sizes/twin-bed.png",
+    "image": "assets/products/sizes/twin-bed.png",
     "description": "Great for solo sleepers or guest rooms."
   },
   {
     "category": "sizes",
     "title": "Double / Full",
     "tags": ["54 in x 75 in", "137 cm x 191 cm"],
-    "image": "products/sizes/double-full.png",
+    "image": "assets/products/sizes/double-full.png",
     "description": "Cozy for two, spacious for one."
   },
   {
     "category": "sizes",
     "title": "Queen Size",
     "tags": ["60 in x 80 in", "152 cm x 203 cm"],
-    "image": "products/sizes/queen-size.png",
+    "image": "assets/products/sizes/queen-size.png",
     "description": "Most popular size for couples."
   },
   {
     "category": "sizes",
     "title": "King Size",
     "tags": ["76 in x 80 in", "193 cm x 203 cm"],
-    "image": "products/sizes/king-size.png",
+    "image": "assets/products/sizes/king-size.png",
     "description": "Extra-long bed for tall people; perfect for families."
   },
 
@@ -41,42 +41,42 @@
     "category": "types",
     "title": "Trundle Bed",
     "tags": ["Shared Room", "Guest Rooms", "Families with Kids"],
-    "image": "products/types/trundle-bed.png",
+    "image": "assets/products/types/trundle-bed.png",
     "description": "Space-saving functionality. It slides under another bed — easy extra sleeping space."
   },
   {
     "category": "types",
     "title": "Foam Mattress",
     "tags": ["Kids Rooms", "Light Sleeper", "Short Term Comfort"],
-    "image": "products/types/foam-mattress.png",
+    "image": "assets/products/types/foam-mattress.png",
     "description": "Light with simple comfort. Also budget-friendly and versatile."
   },
   {
     "category": "types",
     "title": "Spring Mattress",
     "tags": ["Back Sleeper", "Stomach Sleeper", "Hot Sleeper"],
-    "image": "products/types/spring-mattress.png",
+    "image": "assets/products/types/spring-mattress.png",
     "description": "Firm, lifted, and breathable. It has classic feel with coil support and airflow."
   },
   {
     "category": "types",
     "title": "Latex Foam",
     "tags": ["Combo Sleeper", "Hot Sleeper", "Allergy-prone Users"],
-    "image": "products/types/latex-foam.png",
+    "image": "assets/products/types/latex-foam.png",
     "description": "Firm but bouncy, naturally cool. Also breathable, hypoallergenic, eco-friendly, durable."
   },
   {
     "category": "types",
     "title": "Foldable Bed",
     "tags": ["Small Spaces", "Guest Use", "Quick Setup"],
-    "image": "products/types/foldable-bed.png",
+    "image": "assets/products/types/foldable-bed.png",
     "description": "Soft, portable, and flexible. Can be folded for easy storage and transport."
   },
   {
     "category": "types",
     "title": "Memory Foam",
     "tags": ["Side Sleepers", "Couples", "With Back Pain"],
-    "image": "products/types/memory-foam.png",
+    "image": "assets/products/types/memory-foam.png",
     "description": "Adapts to your body, relieves pressure, isolates movement."
   },
  
@@ -85,28 +85,28 @@
     "category": "firmness",
     "title": "Plush",
     "tags": ["Side Sleeper", "Light Sleeper", "With Backpain"],
-    "image": "products/firmness/plush.png",
+    "image": "assets/products/firmness/plush.png",
     "description": "Very soft and cushiony — you’ll sink in and feel hugged. Great for pressure relief."
   },
   {
     "category": "firmness",
     "title": "Medium Plush",
     "tags": ["Side Sleeper", "Combo Sleeper"],
-    "image": "products/firmness/medium-plush.png",
+    "image": "assets/products/firmness/medium-plush.png",
     "description": "Still soft, but with a little more pushback. A cozy balance of contour and support."
   },
   {
     "category": "firmness",
     "title": "Medium Firm",
     "tags": ["Stomach Sleeper", "Back Conditions", "Heavier Sleeper"],
-    "image": "products/firmness/medium-firm.png",
+    "image": "assets/products/firmness/medium-firm.png",
     "description": "Balanced — not too soft, not too hard. Just the right mix of comfort and support. Keeps your spine aligned without too much"
   },
   {
     "category": "firmness",
     "title": "Firm",
     "tags": ["Side Sleeper", "Combo Sleeper"],
-    "image": "products/firmness/firm.png",
+    "image": "assets/products/firmness/firm.png",
     "description": "More solid, with less give. Keeps your body lifted and aligned."
   }
 ]
